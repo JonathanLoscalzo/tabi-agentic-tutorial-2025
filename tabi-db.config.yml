@@ -1,0 +1,29 @@
+# Configuración de Tabi QA System
+
+# Modelo de embeddings de Ollama
+embedding_model: "embeddinggemma:latest"
+
+# Modelo LLM de Ollama
+# llm_model: "deepseek-r1:1.5b"
+llm_model: "mistral:7b"
+# llm_model: "phi4:latest"
+# llm_model: "gemma3:1b"
+
+# Configuración de chunks de documentos
+chunk_size: 1000
+chunk_overlap: 200
+
+# Configuración de ChromaDB
+chroma_persist_directory: "./chroma_db"
+chroma_collection_name: "tabi_docs"
+
+# Configuración del QA Engine
+n_context_docs: 5
+temperature: 0.2
+
+# Directorio de datos
+data_directory: "./data"
+
+# Tamaño de batch para procesamiento
+batch_size: 50
+

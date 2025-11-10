@@ -1,0 +1,43 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# ChromaDB - Base de datos vectorial generada
+chroma_db/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporal files
+tmp/
+temp/
+
+# Respuestas generadas por el sistema de agentes
+answers/
+
+data/
+*.db
+*.db-shm
+*.db-wal
+
+.env

@@ -1,0 +1,47 @@
+[project]
+name = "agentic-tabi-qa"
+version = "0.1.0"
+description = "Sistema de Q&A con RAG usando Ollama y ChromaDB"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=0.4.22",
+    "ollama>=0.1.6",
+    "pypdf>=3.17.4",
+    "langchain>=0.1.0",
+    "streamlit>=1.31.0",
+    "langchain-community>=0.4.1",
+    "langchain-text-splitters>=0.1.0",
+    "questionary>=2.1.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "pyyaml>=6.0.0",
+    "langchain-chroma>=1.0.0",
+    "langchain-ollama>=1.0.0",
+    "httpx>=0.28.1",
+    "beautifulsoup4>=4.14.2",
+    "langgraph-checkpoint-sqlite>=3.0.0",
+    "langfuse>=3.9.1",
+    "langchain-aws>=1.0.0",
+    "loguru>=0.7.3",
+    "langchain-postgres>=0.0.16",
+    "langgraph-checkpoint-postgres>=3.0.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.3", "black>=23.12.1"]
+
+# [build-system]
+# requires = ["hatchling"]
+# build-backend = "hatchling.build"
+
+[project.scripts]
+tabi-qa = "clients.cli.tabi_llm_app:main"
+tabi-qa-st = "clients.streamlit.main:main"
+tabi-qa-agent = "demo_agents:main"
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
